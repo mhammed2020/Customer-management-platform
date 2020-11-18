@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 
 class Customer(models.Model):
@@ -37,7 +36,7 @@ class Product(models.Model):
 
 
 
-
+ 
 class Order(models.Model):
 	STATUS = (
 			('Pending', 'Pending'),
