@@ -42,7 +42,6 @@ def customer(request, pk_test):
 def createOrder(request):
     form = OrderForm()
     if request.method == 'POST':
-		#print('Printing POST:', request.POST)
 	    form = OrderForm(request.POST)
 	    if form.is_valid():
 		    form.save()
