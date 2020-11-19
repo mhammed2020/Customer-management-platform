@@ -26,13 +26,13 @@ def registerPage(request):
 			user = form.save()
 			username = form.cleaned_data.get('username')
 
-			group = Group.objects.get(name='customer')
-			user.groups.add(group)
-			#
-			Customer.objects.create(
-				user=user,
-				name=user.username,
-				)
+			# group = Group.objects.get(name='customer')
+			# user.groups.add(group)
+			# #
+			# Customer.objects.create(
+			# 	user=user,
+			# 	name=user.username,
+			# 	)
 
 			messages.success(request, 'Account was created for ' + username)
 
@@ -92,7 +92,7 @@ def userPage(request):
 	delivered = orders.filter(status='Delivered').count()
 	pending = orders.filter(status='Pending').count()
 
-	print('ORDERS:', orders)
+	# print('ORDERS:', orders)
 
 	context = {'orders':orders, 'total_orders':total_orders,
 	'delivered':delivered,'pending':pending}

@@ -36,8 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-        'accounts',
-        'django_filters',
+    'accounts.apps.AccountsConfig',
+            'django_filters',
             'crispy_forms',
 ]
 
@@ -135,3 +135,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+
+#SMTP Configuration
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'tiktok.0@gmail.com'
+EMAIL_HOST_PASSWORD = 'pwdpwd'
