@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+         'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'naem',
+        'USER': 'username',
+        'PASSWORD': 'pwdpwd',
+        'HOST'  : 'aws',
+        'PORT' : '***'
     }
 }
 
@@ -144,5 +148,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'kiko.0@gmail.com'
-EMAIL_HOST_PASSWORD = 'pswdfs'
+EMAIL_HOST_USER = 'thenewcasablanca2.0@gmail.com'
+EMAIL_HOST_PASSWORD = 'sttjwxplhbamvoji'
